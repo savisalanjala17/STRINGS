@@ -1,0 +1,38 @@
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a string");
+        String a = sc.nextLine();
+        String s1 = a.replaceAll("[{}()\\[\\]]","");
+        
+            System.out.println("Altered String: " + s1);
+        
+      
+    }
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a string");
+        String a = sc.nextLine();
+        String s1="";
+        
+        for(int i=0;i<a.length();i++){
+            char c=a.charAt(i);
+            
+            if(c!='(' && c!=')' && c!='{' && c!='}'){
+                s1+=c;
+            }
+        }
+        
+        
+            System.out.println("Altered String: " + s1);
+        
+      
+    }
+}
