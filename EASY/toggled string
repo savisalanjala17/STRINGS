@@ -1,0 +1,67 @@
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a string");
+        String a = sc.nextLine();
+        
+        StringBuilder t = new StringBuilder();
+        
+        for(int i=0;i< a.length();i++){
+            char c = a.charAt(i);
+            
+            if(Character.isUpperCase(c)){
+                t.append(Character.toLowerCase(c));
+            }
+            
+            else if(Character.isLowerCase(c)){
+                t.append(Character.toUpperCase(c));
+            }
+            
+            else{
+                t.append(c);
+            }
+        }
+        
+        System.out.println("Toggles String: " + t.toString());
+            
+        
+    }
+}
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a string");
+        String a = sc.nextLine();
+        
+        String t =" ";
+        
+        for(int i=0;i< a.length();i++){
+            char c = a.charAt(i);
+            
+            if(c>='A' && c<='Z'){
+                t+=(char)(c+32);
+            }
+            
+            else if(c>='a' && c<='z'){
+                t+=(char)(c-32);
+            }
+            
+            else{
+                t+=c;
+            }
+        }
+        
+        System.out.println("Toggles String: " + t);
+            
+        
+    }
+}
