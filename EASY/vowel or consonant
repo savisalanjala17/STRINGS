@@ -1,0 +1,21 @@
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a single charachter");
+        char c = sc.next().charAt(0);
+        
+        if(!Character.isLetter(c)){
+            System.out.println("Enter valid charachter");
+            
+        }
+        
+        else if("aeiouAEIOU".indexOf(c)!=-1){
+            System.out.println(c+" is a vowel");
+        }
+        
+        else{
+            System.out.println(c+" is a consonant");
+        }
+    }
+}
