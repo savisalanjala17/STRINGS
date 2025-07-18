@@ -1,0 +1,44 @@
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a string");
+        String a = sc.nextLine();
+        String r ="";
+        
+        for(int i=0;i<a.length();i++){
+            char c = a.charAt(i);
+            
+            if("aeiouAEIOU".indexOf(c) == -1 ){
+                
+            r+=c;
+            }
+        }
+       
+        
+        System.out.println("After removal of vowels : " + r);
+            
+        
+    }
+}
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a string");
+        String a = sc.nextLine();
+        String s1 = a.replaceAll("[aeiouAEIOU]" , "");
+        
+       
+       
+        
+        System.out.println("After removal of vowels : " + s1);
+            
+        
+    }
+}
