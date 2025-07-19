@@ -1,0 +1,24 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.println("Enter orginal string:");
+        String a = sc.nextLine();
+        
+        System.out.println("Enter substring to replace :");
+        String b = sc.nextLine();
+        
+        System.out.println("Enter replacement substring");
+        String c=sc.nextLine();
+        
+        String Result = a.replace(b,c);
+        
+        System.out.println("After Replacement : " + Result); 
+        
+        
+
+       
+}
+}
