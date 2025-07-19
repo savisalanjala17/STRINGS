@@ -1,0 +1,67 @@
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        System.out.println("Enter a string");
+        Scanner sc = new Scanner(System.in);
+        String a = sc.nextLine();
+        char [] s = a.toCharArray();
+        int n=s.length;
+        for(int i=0;i<n;){
+            if(s[i]==' '){
+                i++;
+                continue;
+            }
+            int start=i;
+            while(i<n && s[i]!=' '){
+                i++;
+            }
+            int end =i-1;
+            
+            s[start]=Character.toUpperCase(s[start]);
+            
+            if(end!=start){
+                s[end]=Character.toUpperCase(s[end]);
+            }
+        }
+        
+        String result=new String(s);
+        System.out.println("After Capitalization : "+result);
+    }
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        System.out.println("Enter a string");
+        Scanner sc = new Scanner(System.in);
+        String a = sc.nextLine();
+        String[] words =a.split(" ");
+        String result="";
+        
+        for(String word : words){
+            int len=word.length();
+            
+            if(len ==0){
+                continue;
+            }
+            
+            else if(len == 1){
+                result+=word.toUpperCase()+" ";
+            }
+            
+            else{
+                char first=Character.toUpperCase(word.charAt(0));
+                char last=Character.toUpperCase(word.charAt(len-1));
+                String mid=word.substring(1,len-1);
+                result+=first+mid+last+" ";
+            }
+        }
+        
+       
+        System.out.println("After Capitalization : "+result);
+    }
+}
