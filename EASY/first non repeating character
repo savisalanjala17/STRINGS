@@ -1,0 +1,72 @@
+import java.util.*;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        System.out.println("Enter a string");
+        Scanner sc = new Scanner(System.in);
+        String a = sc.nextLine();
+        String[] words =a.split(" ");
+        LinkedHashMap<Character,Integer> h= new LinkedHashMap<>();
+        
+        for(char c : a.toCharArray()){
+            
+            if(c == ' '){
+                continue;
+            }
+            
+            if(h.containsKey(c)){
+                h.put(c,h.get(c)+1);
+            }
+            else{
+                h.put(c,1);
+            }
+        }
+        
+        for(Map.Entry<Character,Integer>entry : h.entrySet()){
+            if(entry.getValue()==1){
+                System.out.println("First non repeating charachter : "+ entry.getKey());
+                return;
+            }
+        }
+        
+       
+            
+       
+        System.out.println("Not found ");
+        
+    }
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Enter a string:");
+        Scanner sc = new Scanner(System.in);
+        String input = sc.nextLine();
+
+        int[] freq = new int[256]; // Step 1: Create frequency array (ASCII size)
+
+        // Step 2: Count frequency of each character
+        for (int i = 0; i < input.length(); i++) {
+            char c = input.charAt(i);
+            freq[c]++;
+        }
+
+        // Step 3: Find the first character with frequency 1
+        for (int i = 0; i < input.length(); i++) {
+            char c = input.charAt(i);
+            if (freq[c] == 1 && c != ' ') {
+                System.out.println("First non-repeating character: " + c);
+                return;
+            }
+        }
+
+        System.out.println("No non-repeating character found.");
+    }
+}
