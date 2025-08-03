@@ -1,0 +1,34 @@
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        StringBuilder sb = new StringBuilder();
+
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+                switch (Character.toLowerCase(c)) {
+                    case 'a':
+                        sb.append('@');
+                        break;
+                    case 'e':
+                        sb.append('#');
+                        break;
+                    case 'i':
+                        sb.append('!');
+                        break;
+                    case 'o':
+                        sb.append('*');
+                        break;
+                    case 'u':
+                        sb.append('^');
+                        break;
+                    default:
+                       sb.append(c);
+                }
+        }
+
+        System.out.println(sb);
+    }
+}
